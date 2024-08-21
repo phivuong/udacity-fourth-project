@@ -103,7 +103,7 @@ echo "Health probe created: $probeName"
 # Create Network Load Balancer Rule
 echo "STEP 6 - Creating network load balancer rule $lbRule"
 
-az network lb rule create \
+az network lb rule update \
   --resource-group $resourceGroup \
   --name $lbRule \
   --lb-name $lbName \
