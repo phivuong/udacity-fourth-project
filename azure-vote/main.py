@@ -23,7 +23,7 @@ from opencensus.trace.samplers import ProbabilitySampler
 from opencensus.trace.tracer import Tracer
 from opencensus.ext.flask.flask_middleware import FlaskMiddleware
 
-InstrumentationKey = 'InstrumentationKey=87b99281-36c3-4df0-abd5-2885a428fc4b'
+InstrumentationKey = 'InstrumentationKey=5a52b4df-11a4-45b6-a908-2e276b948f82'
 
 config_integration.trace_integrations(['logging'])
 config_integration.trace_integrations(['requests'])
@@ -141,6 +141,6 @@ def index():
 
 if __name__ == "__main__":
     # TODO: Use the statement below when running locally
-    app.run() 
+    # app.run() 
     # TODO: Use the statement below before deployment to VMSS
-    # app.run(host='0.0.0.0', threaded=True, debug=True) # remote
+    app.run(host='0.0.0.0', threaded=True, debug=True) # remote
